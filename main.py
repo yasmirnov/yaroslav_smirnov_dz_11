@@ -34,7 +34,7 @@ def get_candidate_by_name(name):
 @app.route("/skills/<skill>")
 def get_candidate_by_skill(skill):
     """
-    поиск по навыку
+    поиск по навыку(скиллу)
     """
     candidates = utils.get_candidate_by_skill(skill)
     return render_template('skill.html', candidates=candidates, skill=skill, count=len(candidates))
